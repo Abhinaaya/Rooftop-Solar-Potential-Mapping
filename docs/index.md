@@ -22,8 +22,8 @@ The objective is to support sustainable energy planning and solar-powered EV ado
 
 ## 🗂 Data Sources
 
-- NASA POWER — Solar irradiation
-- OpenStreetMap — Building footprints
+- NASA POWER — Satellite-derived solar irradiation
+- OpenStreetMap — Urban building footprints
 - MNRE Guidelines — Technical and economic parameters
 
 ---
@@ -46,8 +46,11 @@ The objective is to support sustainable energy planning and solar-powered EV ado
 ### Model Comparison using MAE
 ![Model MAE](../visuals/model_mae.png)
 
-The Random Forest model substantially outperformed the linear regression baseline across both error metrics.
-The optimized Random Forest model was selected for scenario-based forecasting due to its robustness.
+The Random Forest model reduced RMSE by over **80%** compared to the linear regression baseline,
+demonstrating strong non-linear modeling capability.  
+Evaluation metrics (RMSE and MAE) were computed on held-out validation data to assess generalization
+beyond the training period. The optimized Random Forest model was selected for scenario-based forecasting
+due to its robustness.
 
 ---
 
@@ -57,32 +60,32 @@ The optimized Random Forest model was selected for scenario-based forecasting du
 ![2030 Capacity](../visuals/city_capacity_2030.png)
 
 Under the optimal future scenario, Delhi contributes the largest share of rooftop solar capacity,
-followed by Gurugram and Noida. The results reflect urban density and available rooftop area across NCR cities.
-
+followed by Gurugram and Noida. The results reflect differences in urban density and available rooftop
+area across NCR cities.
 
 ---
 
 ## 🔍 Key Insights
 
-- Strong seasonal patterns drive solar generation
-- Geographic features dominate model predictions
-- Technology improvements impact capacity more than air-quality changes
+- Seasonal effects explain a significant portion of annual variability, with summer months contributing disproportionately to total generation.  
+- Urban density and available rooftop area were stronger predictors of solar capacity than short-term air-quality variations.  
+- Technology efficiency improvements produced larger capacity gains than pollution-reduction scenarios.
 
 ---
 
 ## ⚠️ Limitations
 
-- Partial reliance on synthetic historical data
-- Assumptions on policy and adoption rates
-- Rooftop orientation and shading not explicitly modeled
+- Partial reliance on synthetic historical data for long-term forecasting  
+- Assumptions on policy adoption rates and technology efficiency  
+- Rooftop orientation and shading effects not explicitly modeled  
 
 ---
 
 ## 🚀 Future Work
 
-- Integrate real installation and utility data
-- Improve pollution sensitivity features
-- Incorporate spatial autocorrelation models
+- Integrate real rooftop installation and utility-scale data  
+- Improve pollution-feature sensitivity and temporal resolution  
+- Incorporate spatial autocorrelation and neighborhood-level effects  
 
 ---
 
