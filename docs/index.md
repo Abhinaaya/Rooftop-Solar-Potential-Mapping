@@ -40,11 +40,25 @@ The objective is to support sustainable energy planning and solar-powered EV ado
 
 ## 🤖 Model Performance
 
-### Actual vs Predicted Solar Capacity
-![Actual vs Predicted](../visuals/actual_vs_pred.png)
+### Model Comparison using RMSE
+![Model RMSE](../visuals/model_rmse.png)
 
-### City-wise Prediction Error
-![City RMSE](../visuals/city_rmse.png)
+### Model Comparison using MAE
+![Model MAE](../visuals/model_mae.png)
+
+The Random Forest model substantially outperformed the linear regression baseline across both error metrics.
+The optimized Random Forest model was selected for scenario-based forecasting due to its robustness.
+
+---
+
+## 🌆 Projected Rooftop Solar Capacity by 2030
+
+### Optimal Future Scenario
+![2030 Capacity](../visuals/city_capacity_2030.png)
+
+Under the optimal future scenario, Delhi contributes the largest share of rooftop solar capacity,
+followed by Gurugram and Noida. The results reflect urban density and available rooftop area across NCR cities.
+
 
 ---
 
